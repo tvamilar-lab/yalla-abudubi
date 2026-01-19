@@ -225,37 +225,6 @@ function copyCode(){
 }
 </script>
 
-<!-- 🔒 PROTECTION (الأصلي) -->
-<script>
-document.addEventListener('contextmenu', e => e.preventDefault());
-
-document.addEventListener('keydown', e => {
-  if (
-    e.key === "F12" ||
-    (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key)) ||
-    (e.ctrlKey && e.key === "U")
-  ) {
-    e.preventDefault();
-    kickOut();
-  }
-});
-
-function kickOut(){
-  document.body.innerHTML="";
-  location.href="about:blank";
-}
-
-setInterval(() => {
-  if (
-    window.outerWidth - window.innerWidth > 160 ||
-    window.outerHeight - window.innerHeight > 160
-  ) kickOut();
-}, 500);
-
-console.log = console.warn = console.error = console.info = function(){};
-</script>
-
-
 
   /* لو كان فاتح Inspect قبل كده */
 
@@ -293,3 +262,4 @@ console.log = console.warn = console.error = console.info = function(){};
 
 </body>
 </html>
+
